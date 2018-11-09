@@ -1,6 +1,5 @@
-from app import *
 import urllib.request,json
-from .models import News
+from .models import News, Headlines
 
 #Getting api key
 api_key = None
@@ -8,10 +7,15 @@ api_key = None
 #Getting newsapi base url
 base_url = None
 
+#Getting newsapi secondary url
+secondary_url = None
+
 def configure_request(app):
     global api_key,base_url,secondary_url
     api_key =  app.config['NEWS_API_KEY'] 
     base_url =  app.config['NEWS_API_BASE_URL']
+    secondary_url = app.config['NEWS_API_SECONDARY_URL']
+
 
 def get_news(category):
   """  
@@ -25,8 +29,8 @@ def get_news(category):
 
     news_results = None
 
-    if get_news_response['results']:
-      news_results_list = get_news_response['results']
+    if get_news_response['sources']:
+      news_results_list = get_news_response['sources']
       news_results = process_results(news_results_list)
 
   return news_results
@@ -96,18 +100,3 @@ def process_headlines(headlines_list):
       headlines_results.append(headlines_object)
 
   return headlines_results
-
-def search_news(news_name):
-    search_news_url = 'https://newsapi.org/v2/sources?language=en&category={}&apiKey={}'.format(api_key,movie_name)
-    with urllib.request.urlopen(search_search_url) as url:
-        search_news_data = url.read()
-        search_news_response = json.loads(search_news_data)
-
-        search_news_results = None
-
-        if search_movie_response['results']:
-            search_movie_list = search_movie_response['results']
-            search_movie_results = process_results(search_movie_list)
-
-
-    return search_news_results 
