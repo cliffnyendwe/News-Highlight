@@ -1,6 +1,6 @@
 from app import *
 import urllib.request,json
-from .models import news
+from .models import News
 
 #Getting api key
 api_key = None
@@ -25,8 +25,8 @@ def get_news(category):
 
     news_results = None
 
-    if get_news_response['center']:
-      news_results_list = get_news_response['center']
+    if get_news_response['results']:
+      news_results_list = get_news_response['results']
       news_results = process_results(news_results_list)
 
   return news_results
@@ -97,7 +97,7 @@ def process_headlines(headlines_list):
 
   return headlines_results
 
-  def search_news(news_name):
+def search_news(news_name):
     search_news_url = 'https://newsapi.org/v2/sources?language=en&category={}&apiKey={}'.format(api_key,movie_name)
     with urllib.request.urlopen(search_search_url) as url:
         search_news_data = url.read()
