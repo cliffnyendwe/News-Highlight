@@ -1,8 +1,8 @@
 #Imports
 from flask import render_template,request,redirect,url_for
 from . import main
-from ..request import get_news,get_headlines,search_news
-from ..models import News,Headlines
+from ..request import get_news,search_news
+# from ..models import News,Headlines
 from ..models import Review
 from .forms import ReviewForm
 
@@ -45,15 +45,15 @@ def search(news_name):
     return render_template('search.html',news = searched_news)
 
 
-@main.route('/headlines/<id>')
-def headlines(id):
-    """  
-    View headlinse from a specific source
-    """
-    headlines = get_headlines(id)
-    title = f'{id}'
+# @main.route('/headlines/<id>')
+# def headlines(id):
+#     """  
+#     View headlinse from a specific source
+#     """
+#     headlines = get_headlines(id)
+#     title = f'{id}'
 
-    return render_template('news.html',title = title,headlines = headlines)
+#     return render_template('news.html',title = title,headlines = headlines)
                           
                           
                           
