@@ -31,7 +31,7 @@ def index():
     if search_movie:
         return redirect(url_for('search',news_name=search_news))
     else:
-        return render_template('index.html', title = title, general = general_news, entertainment = entertainment_news, general = general_news,health = health_news,sports = sports_news,science = science_news,technology = technology_news )
+        return render_template('index.html', title = title, general = general_news, entertainment = entertainment_news,health = health_news,sports = sports_news,science = science_news,technology = technology_news )
 
 @main.route('/search/<news_name>')
 def search(news_name):

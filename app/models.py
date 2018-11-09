@@ -2,9 +2,7 @@ class News:
     '''
     Movie class to define News Objects
     '''
-
-
-  def __init__(self,id,name,url,category):
+    def __init__(self,id,name,url,category):
       self.id = id
       self.name = name 
       self.url = url 
@@ -15,7 +13,7 @@ class Review:
 
     all_reviews = []
 
-      def __init__(self,id,title,description,url,urlToImage,publishedAt):
+    def __init__(self,id,title,description,url,urlToImage,publishedAt):
       self.id = id
       self.title = title
       self.description = description
