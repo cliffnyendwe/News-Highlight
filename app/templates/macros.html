@@ -17,11 +17,11 @@
 {% for headline in headlines_list %}
 
 <li>
-    <img src="{{ headline.urlToImage }}" alt="Card image cap" style='object-fit:cover; width: 300px;height: 337px;'>
+    <img src="{{ headline.urlToImage }}"style='object-fit:cover; width: 300px;height: 337px;'>
     <h4> {{ headline.title}} </h4>
     <p>{{ headline.description }}</p>
     <p>Published {{ headline.publishedAt }}</small></p>
-    <a target='_blank' href="{{ headline.url }}" class="btn btn-primary">View Full Story</a>
+    <a target='_blank' href="{{ headline.url }}" class="btn btn-primary">FULL STORY</a>
 </li>
 <br>
 
