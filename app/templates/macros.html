@@ -2,7 +2,7 @@
 
 {% for source in news_list %}
 
-<li class="list-group-item">
+<li class="list-group-item" style="font-size:x-large">
     <a target="_blank" href="/headlines/{{ source.id }}">
         {{ source.name }}</a>
 </li>
@@ -17,7 +17,7 @@
 {% for headline in headlines_list %}
 
 <li>
-    <img src="{{ headline.urlToImage }}"style='object-fit:cover; width: 300px;height: 337px;'>
+    <img src="{{ headline.urlToImage }}"style= width: 300px;height: 337px;>
     <h4> {{ headline.title}} </h4>
     <p>{{ headline.description }}</p>
     <p>Published {{ headline.publishedAt }}</small></p>
