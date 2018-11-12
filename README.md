@@ -1,5 +1,5 @@
 # NEWS HIGHLIGHTS
-By Cliff Nyendwe, 29/09/2018
+By Cliff Nyendwe, 11/11/2018
 
 # Description
 News highlight is an application where users have the access to view all kind of news,this application will enable the user to choose the kind of news they want to watch or listen to.
