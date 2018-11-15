@@ -15,7 +15,7 @@ News highlight is an application where users have the access to view all kind of
 
 
 # Github-link
-https://github.com/cliffnyendwe/News-Highlight.git 
+https://cliffnews254.herokuapp.com/
 
 # Contacts
 To find me, use: cliffnyendwe2018@gmail.com
@@ -58,7 +58,7 @@ WTForms==2.1
 pkg-resources==0.0.0
 
 # Live Demo
-The web app can be accessed from the following link https://git.heroku.com/cliffnews254.git
+The web app can be accessed from the following link https://cliffnews254.herokuapp.com/
 
 # License
 The project is under license by MIT
